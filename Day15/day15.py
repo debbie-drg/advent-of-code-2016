@@ -31,9 +31,10 @@ if __name__ == "__main__":
         file_name = "input.txt"
     input_data = open(file_name).read().strip().split("\n")
     modulos = [int(line.split()[3]) for line in input_data]
-    
-    remainders = [- int(input_data[index].split()[-1].removesuffix(".")) - (index + 1)
-        % modulos[index]
+
+    remainders = [
+        -int(input_data[index].split()[-1].removesuffix("."))
+        - (index + 1) % modulos[index]
         for index in range(len(input_data))
     ]
     solution = chinese_remainder_solution(remainders, modulos)
