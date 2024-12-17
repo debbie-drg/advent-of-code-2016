@@ -18,7 +18,7 @@ def in_bounds(position: tuple[int, int]) -> bool:
     return 0 <= position[0] < 4 and 0 <= position[1] < 4
 
 
-def open_doors(passcode: str, path: str):
+def open_doors(passcode: str, path: str) -> list[int]:
     hash_instructions = md5_hash_doors(passcode + path)
     open_doors = []
     for index in range(4):
