@@ -1,5 +1,4 @@
 import sys
-import functools
 import heapq
 
 DIRECTIONS = [(1, 0), (-1, 0), (0, 1), (0, -1)]
@@ -17,7 +16,6 @@ class Maze:
     def __init__(self, favourite_number: int) -> None:
         self.favourite_number = favourite_number
 
-    @functools.cache
     def is_wall(self, position: tuple[int, int]) -> bool:
         if position[0] < 0 or position[1] < 0:
             return True
