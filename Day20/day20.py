@@ -106,5 +106,4 @@ if __name__ == "__main__":
     data = open(file_name).read().strip().split("\n")
     ipranges = create_intervals(data)
     print(f"The first free IP is {ipranges.first_free_ip()}")
-    print(ipranges.intervals)
     print(f"The number of allowed IPs is {ipranges.allowed_ips(max_range)}")
