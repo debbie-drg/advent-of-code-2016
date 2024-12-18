@@ -9,13 +9,13 @@ def generate_string(in_data: str) -> str:
     return out_data
 
 
-def fill_disk(in_data: str, target_length: int) -> int:
+def fill_disk(in_data: str, target_length: int) -> str:
     while len(in_data) < target_length:
         in_data = generate_string(in_data)
     return in_data[:target_length]
 
 
-def dragon_checksum(in_data: str) -> int:
+def dragon_checksum(in_data: str) -> str:
     checksum = ""
     for index in range(0, len(in_data), 2):
         if in_data[index : index + 2] in {"00", "11"}:

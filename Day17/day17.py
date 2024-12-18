@@ -27,7 +27,7 @@ def open_doors(passcode: str, path: str) -> list[int]:
     return open_doors
 
 
-def shortest_path(passcode: str) -> int:
+def shortest_path(passcode: str) -> tuple[int, int]:
     queue = [(0, (0, 0), "")]
     paths = []
     while queue:
