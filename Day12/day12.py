@@ -29,7 +29,7 @@ class AssembunnyMachine:
     
     def run(self):
         counter = 0
-        while counter < len(instructions):
+        while counter < len(self.instructions):
             counter += self.run_instruction(counter)
 
 if __name__ == "__main__":
